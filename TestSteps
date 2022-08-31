@@ -1,0 +1,73 @@
+package StepDef;
+
+import BrowserFacade.Browserfacade;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class StepDefination {
+
+    @Given("I am on home page")
+    public void i_am_on_home_page() throws Exception {
+
+        Browserfacade.getdriver().get("https://www.sainsburys.co.uk");
+        WebElement BtnAcceptCookies =  Browserfacade.getdriver().findElement
+        (By.xpath("//button[contains(@id ,'onetrust-accept-btn-handler')]"));
+        Browserfacade.WaitForElementToBeVisible(Browserfacade.getdriver(),BtnAcceptCookies,Duration.ofSeconds(60));
+        BtnAcceptCookies.click();
+    }
+    @When("I clicked on Tu Link")
+    public void i_clicked_on_tu_link() {
+    }
+
+    @And("I clicked on Men")
+    public void i_clicked_on_men() {
+    }
+
+    @And("I Clicked on T-shirt polo")
+    public void i_clicked_on_t_shirt_polo() {
+    }
+
+    @And("I selected the Size")
+    public void i_selected_the_size() {
+    }
+
+    @And("I selected the quantity")
+    public void i_selected_the_quantity() {
+    }
+
+    @And("I added the item in basket")
+    public void i_added_the_item_in_basket() {
+    }
+
+    @And("I Clicked on jeans")
+    public void i_clicked_on_jeans() {
+    }
+
+    @And("I Clicked on Formal shirt")
+    public void i_clicked_on_formal_shirt() {
+    }
+
+    @And("I cliked on basket")
+    public void i_cliked_on_basket() {
+    }
+
+    @And("I deleted least price item")
+    public void i_deleted_least_price_item() {
+    }
+
+    @Then("I have got two items left in basket")
+    public void i_have_got_two_items_left_in_basket() {
+
+    }
+
+}
